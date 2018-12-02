@@ -4,11 +4,11 @@ namespace App\Repository;
 
 use App\Entity\RepLog;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Symfony\Bridge\Doctrine\ManagerRegistry;
+use Doctrine\Common\Persistence\ManagerRegistry;
 
 class RepLogRepository extends ServiceEntityRepository
 {
-    public function __construct(ManagerRegistry $registry, $entityClass)
+    public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, RepLog::class);
     }
