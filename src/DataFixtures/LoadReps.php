@@ -1,13 +1,13 @@
 <?php
 
-namespace App\DataFixtures\ORM;
+namespace App\DataFixtures;
 
-use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use App\Entity\User;
 use App\Entity\RepLog;
 
-class LoadReps implements FixtureInterface
+class LoadReps extends Fixture
 {
     /**
      * {@inheritDoc}
