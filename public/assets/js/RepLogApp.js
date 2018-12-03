@@ -158,17 +158,17 @@
                     continue;
                 }
 
-                const $error = $('<span class="js-field-error help-block"></span>');
+                $(element).addClass('is-invalid');
+                const $error = $('<span class="js-field-error invalid-feedback"></span>');
                 $error.html(errorData[fieldName]);
                 $wrapper.append($error);
-                $wrapper.addClass('has-error');
             }
         }
 
         _removeFormErrors() {
             const $form = this.$wrapper.find(RepLogApp._selectors.newRepForm);
             $form.find('.js-field-error').remove();
-            $form.find('.form-group').removeClass('has-error');
+            $form.find('.is-invalid').removeClass('is-invalid');
         }
 
         _clearForm() {

@@ -48,6 +48,7 @@ footer.footer {
 
 .leaderboard-table {
     border: 2px solid #000;
+    font-size: 12px;
 }
 
 .leaderboard-table-striped>tbody>tr:nth-of-type(odd) {
