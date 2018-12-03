@@ -39,7 +39,7 @@ class RepLog
      * @Serializer\Groups({"Default"})
      * @ORM\Column(name="reps", type="integer")
      * @Assert\NotBlank(message="How many times did you lift this?")
-     * @Assert\GreaterThan(value=0, message="You can certainly life more than just 0!")
+     * @Assert\GreaterThan(value=0, message="You can certainly lift more than just 0!")
      */
     private $reps;
 
