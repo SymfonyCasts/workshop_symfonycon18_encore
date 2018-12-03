@@ -1,36 +1,73 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}" />
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('assets/js/login.js') }}"></script>
+{% endblock %}
+
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-<form method="post">
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+    <div class="container">
+        <div class="wrapper">
+            <form method="post" class="form-signin">
+                <h3><img class="dumbbell" src="{{ asset('assets/images/dumbbell.png') }}">Login! Start Lifting!</h3>
+                <div class="js-recommended-login">
+                    <a href="#" class="js-show-login">Don't know the login?</a>
+                    <div class="js-recommended-login-details" style="display: none;">
+                        Sir or madam, might I recommend that you try the following login details:
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>Email</th>
+                                    <td>cindy_clawford@example.com</td>
+                                </tr>
+                                <tr>
+                                    <th>Password</th>
+                                    <td>pumpup</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <hr class="colorgraph" />
 
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail" class="sr-only">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <br/>
 
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
+                {% if error %}
+                    <div class="alert alert-block alert-danger">{{ error.messageKey|trans }}</div>
+                {% endif %}
 
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
+                <input type="text"
+                       class="form-control js-login-field-username"
+                       name="email"
+                       value="{{ last_username }}"
+                       required="required"
+                       placeholder="Username"
+                />
+                <input type="password"
+                       class="form-control"
+                       name="password"
+                       required="required"
+                       placeholder="Password"
+                />
 
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" name="_remember_me"> Remember me
-            </label>
+                <input type="checkbox" name="_remember_me" checked style="display: none;" />
+
+                <input type="hidden" name="_csrf_token"
+                       value="{{ csrf_token('authenticate') }}">
+
+                <button type="submit" class="btn btn-primary btn-lg btn-block">
+                    Login
+                </button>
+            </form>
         </div>
-    #}
-
-    <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
-    </button>
-</form>
-{% endblock %}
+    </div>
+{% endblock body %}
