@@ -38,13 +38,13 @@ class User implements UserInterface
      * @Assert\NotBlank
      * @ORM\Column(name="first_name", type="string", length=255)
      */
-    protected $firstName;
+    private $firstName;
 
     /**
      * @Assert\NotBlank
      * @ORM\Column(name="last_name", type="string", length=255)
      */
-    protected $lastName;
+    private $lastName;
 
     public function getId(): ?int
     {
