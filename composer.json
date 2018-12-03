@@ -65,6 +65,7 @@
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^3.0",
         "symfony/debug-pack": "^1.0",
+        "symfony/maker-bundle": "^1.9",
         "symfony/web-server-bundle": "4.2.*"
     }
 }
