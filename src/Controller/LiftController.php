@@ -20,7 +20,7 @@ class LiftController extends BaseController
         $form = $this->createForm(RepLogType::class);
         $form->handleRequest($request);
 
-        if ($form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $repLog = $form->getData();
             $repLog->setUser($this->getUser());

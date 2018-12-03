@@ -2,11 +2,9 @@
 
 namespace App\Controller;
 
-use App\Api\RepLogApiModel;
 use App\Entity\RepLog;
 use App\Form\Type\RepLogType;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
@@ -14,8 +12,7 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 class RepLogController extends BaseController
 {
     /**
-     * @Route("/reps", name="rep_log_list", options={"expose" = true})
-     * @Method("GET")
+     * @Route("/reps", name="rep_log_list", options={"expose" = true}, methods={"GET"})
      */
     public function getRepLogsAction()
     {
@@ -27,8 +24,7 @@ class RepLogController extends BaseController
     }
 
     /**
-     * @Route("/reps/{id}", name="rep_log_get")
-     * @Method("GET")
+     * @Route("/reps/{id}", name="rep_log_get", methods={"GET"})
      */
     public function getRepLogAction(RepLog $repLog)
     {
@@ -38,8 +34,7 @@ class RepLogController extends BaseController
     }
 
     /**
-     * @Route("/reps/{id}", name="rep_log_delete")
-     * @Method("DELETE")
+     * @Route("/reps/{id}", name="rep_log_delete", methods={"DELETE"})
      */
     public function deleteRepLogAction(RepLog $repLog)
     {
@@ -52,8 +47,7 @@ class RepLogController extends BaseController
     }
 
     /**
-     * @Route("/reps", name="rep_log_new", options={"expose" = true})
-     * @Method("POST")
+     * @Route("/reps", name="rep_log_new", options={"expose" = true}, methods={"POST"})
      */
     public function newRepLogAction(Request $request)
     {
