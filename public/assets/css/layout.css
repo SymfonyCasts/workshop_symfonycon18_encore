@@ -1,0 +1,77 @@
+.main-content {
+    margin-top: 80px;
+}
+footer.footer {
+    margin-top: 100px;
+}
+
+.mini-dumbbell {
+    width: 13px;
+    height: 13px;
+    background: url('../images/dumbbell-mini.png') center center  no-repeat;
+    display: inline-block;
+}
+
+/*LOGIN*/
+
+.btn-login {
+    background-color: #59B2E0;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    height: auto;
+    font-weight: normal;
+    padding: 14px 0;
+    text-transform: uppercase;
+    border-color: #59B2E6;
+}
+.btn-login:hover,
+.btn-login:focus {
+    color: #fff;
+    background-color: #53A3CD;
+    border-color: #53A3CD;
+}
+
+/*INDEX*/
+
+.dumbbell {
+    height: 25px;
+    width: auto;
+    padding-right: 10px;
+}
+
+.leaderboard {
+    background-color: #FFDF00;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.leaderboard-table {
+    border: 2px solid #000;
+}
+
+.leaderboard-table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.leaderboard-table-striped>tbody>tr:nth-of-type(even) {
+    background-color: #C6C6C6;
+}
+
+.leaderboard-table > thead > tr > th {
+    border-bottom: 2px solid #000;
+    background-color: #145ACC;
+    color: #fff;
+}
+
+.leaderboard-table > tbody > tr > td {
+    border-top: 1px solid #000;
+}
+
+.leaderboard-table-hover>tbody>tr:hover {
+    background-color: #797979;
+}
+
+.cat-count {
+    font-size: .9em;
+}
