@@ -1,12 +1,101 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Find Something to Lift!{% endblock %}</title>
+
+    {% block stylesheets %}
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+        <link href="{{ asset('assets/css/layout.css') }}" rel="stylesheet" />
+    {% endblock %}
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle"
+                    data-toggle="collapse"
+                    data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand"
+               href="{{ path('homepage') }}"
+               data-toggle="tooltip"
+               data-placement="bottom"
+               title="DO IT! LIFT STUFF!!!">Lift Stuff</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="drop-down" data-toggle="tooltip" data-placement="left" title="Welcome back {{ app.user.firstName }}">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="fa fa-user"></span>
+                            <strong>{{ app.user.username }}</strong>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{ path('lift') }}">
+                                    Lift Stuff
+                                    <span class="mini-dumbbell"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ path('app_logout') }}">
+                                    <span class="fa fa-sign-out"></span>
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            {% endif %}
+        </div>
+        <!--/.navbar-collapse -->
+    </div>
+</div>
+
+{% block hero %}{% endblock %}
+
+<div class="container main-content">
+    {% for type, messages in app.session.flashbag.all() %}
+        {% for message in messages %}
+            <div class="flash-{{ type }} alert alert-info">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    {% block body %}{% endblock %}
+
+    <footer class="footer">
+        <hr />
+
+        <p>&copy; LiftStuff {{ ''|date('Y') }}</p>
+    </footer>
+</div>
+<!-- /container -->
+
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.auto.min.js"></script>
+    <script src="{{ asset('assets/js/layout.js') }}"></script>
+{% endblock %}
+
+</body>
 </html>
