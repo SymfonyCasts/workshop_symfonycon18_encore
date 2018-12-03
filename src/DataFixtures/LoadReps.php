@@ -6,12 +6,17 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use App\Entity\User;
 use App\Entity\RepLog;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class LoadReps extends Fixture
 {
-    /**
-     * {@inheritDoc}
-     */
+    private $passwordEncoder;
+
+    public function __construct(UserPasswordEncoderInterface $passwordEncoder)
+    {
+        $this->passwordEncoder = $passwordEncoder;
+    }
+
     public function load(ObjectManager $manager)
     {
         $items = array_flip(RepLog::getThingsYouCanLiftChoices());
@@ -34,16 +39,18 @@ class LoadReps extends Fixture
             $lastName = $name[1];
 
             $user = new User();
-            $username = sprintf('%s_%s', $firstName, $lastName);
-            $username = strtolower($username);
-            $username = str_replace(' ', '', $username);
-            $username = str_replace('.', '', $username);
-            $user->setUsername($username);
-            $user->setEmail($user->getUsername().'@example.com');
-            $user->setPlainPassword('pumpup');
+            $email = sprintf('%s_%s@example.com', $firstName, $lastName);
+            $email = strtolower($email);
+            $email = str_replace(' ', '', $email);
+            $email = str_replace('.', '', $email);
+            $user->setEmail($email);
+
+            $user->setPassword($this->passwordEncoder->encodePassword(
+                $user,
+                'pumpup'
+            ));
             $user->setFirstName($firstName);
             $user->setLastName($lastName);
-            $user->setEnabled(true);
             $manager->persist($user);
 
             for ($j = 0; $j < rand(1, 5); $j++) {
