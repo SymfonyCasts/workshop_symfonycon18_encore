@@ -8,7 +8,7 @@ use App\Entity\User;
 use App\Entity\RepLog;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
-class LoadReps extends Fixture
+class LoadUsersAndReps extends Fixture
 {
     private $passwordEncoder;
 
@@ -39,11 +39,11 @@ class LoadReps extends Fixture
             $lastName = $name[1];
 
             $user = new User();
-            $email = sprintf('%s_%s@example.com', $firstName, $lastName);
+            $email = sprintf('%s_%s', $firstName, $lastName);
             $email = strtolower($email);
             $email = str_replace(' ', '', $email);
             $email = str_replace('.', '', $email);
-            $user->setEmail($email);
+            $user->setEmail($email.'@example.com');
 
             $user->setPassword($this->passwordEncoder->encodePassword(
                 $user,
