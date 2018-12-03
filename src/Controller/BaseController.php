@@ -7,6 +7,7 @@ use App\Entity\RepLog;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class BaseController extends AbstractController
 {
@@ -100,4 +101,15 @@ class BaseController extends AbstractController
 
         return $models;
     }
+
+    public static function getSubscribedServices()
+    {
+        $services = parent::getSubscribedServices();
+
+        $services['translator'] = TranslatorInterface::class;
+
+        return  $services;
+    }
+
+
 }
