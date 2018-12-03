@@ -1,0 +1,18 @@
+<table class="table leaderboard-table-striped leaderboard-table-hover leaderboard-table">
+    <thead>
+    <tr>
+        <th class="text-center">Username</th>
+        <th class="text-center">Weight Lifted</th>
+        <th class="text-center">Cat Equivalent</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for leader in leaderboard %}
+        <tr>
+            <td class="text-center">{{ leader.username }}</td>
+            <td class="text-center">{{ leader.weight }}lbs</td>
+            <td class="text-center">{{ leader.in_cats }} fat cats</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
