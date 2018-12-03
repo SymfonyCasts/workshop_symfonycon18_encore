@@ -155,7 +155,7 @@
                 const $wrapper = $(element).closest('.form-group');
                 if (!errorData[fieldName]) {
                     // no error!
-                    return;
+                    continue;
                 }
 
                 const $error = $('<span class="js-field-error help-block"></span>');
