@@ -15,6 +15,7 @@
         "symfony/security-bundle": "4.2.*",
         "symfony/serializer-pack": "^1.0",
         "symfony/twig-bundle": "4.2.*",
+        "symfony/validator": "4.2.*",
         "symfony/yaml": "4.2.*"
     },
     "config": {
