@@ -1,0 +1,1 @@
+module.exports = 'SymfonyCon 2018';
