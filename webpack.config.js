@@ -54,6 +54,9 @@ Encore
 
     // uncomment if you're having problems with a jQuery plugin
     .autoProvidejQuery()
+    .configureDefinePlugin((options) => {
+        options.IS_PRODUCTION = JSON.stringify(Encore.isProduction());
+    })
 ;
 
 module.exports = Encore.getWebpackConfig();
