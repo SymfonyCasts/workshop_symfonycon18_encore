@@ -1,0 +1,40 @@
+diff --git a/public/assets/js/app.js b/public/assets/js/app.js
+index 881633d..0e226b9 100644
+--- a/public/assets/js/app.js
++++ b/public/assets/js/app.js
+@@ -1,7 +1,7 @@
+ 'use strict';
+ 
+-(function(window, $) {
++const $ = require('jquery');
++
+     $(document).ready(function() {
+         $('[data-toggle="tooltip"]').tooltip();
+     });
+-})(window, jQuery);
+diff --git a/templates/base.html.twig b/templates/base.html.twig
+index 517768e..7c067ee 100644
+--- a/templates/base.html.twig
++++ b/templates/base.html.twig
+@@ -85,7 +85,7 @@
+     <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+     <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.auto.min.js"></script>
+-    <script src="{{ asset('assets/js/app.js') }}"></script>
++    <script src="{{ asset('build/app.js') }}"></script>
+ {% endblock %}
+ 
+ </body>
+diff --git a/webpack.config.js b/webpack.config.js
+index 30a59a2..2ce4c7d 100644
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -19,7 +19,7 @@ Encore
+      */
+     .addEntry('rep_log', './public/assets/js/rep_log.js')
+     .addEntry('login', './public/assets/js/login.js')
+-    //.addEntry('page1', './assets/js/page1.js')
++    .addEntry('app', './public/assets/js/app.js')
+     //.addEntry('page2', './assets/js/page2.js')
+ 
+     // will require an extra script tag for runtime.js

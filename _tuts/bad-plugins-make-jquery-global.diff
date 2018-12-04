@@ -1,0 +1,12 @@
+diff --git a/public/assets/js/app.js b/public/assets/js/app.js
+index 8ee2c45..b650266 100644
+--- a/public/assets/js/app.js
++++ b/public/assets/js/app.js
+@@ -2,6 +2,7 @@
+ 
+ const $ = require('jquery');
+ require('bootstrap');
++global.jQuery = $;
+ require('jquery-tags-input/dist/jquery.tagsinput.min');
+ 
+     $(document).ready(function() {

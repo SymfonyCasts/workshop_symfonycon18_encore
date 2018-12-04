@@ -1,0 +1,20 @@
+diff --git a/assets/css/_variables.scss b/assets/css/_variables.scss
+index 08e2af1..858db74 100644
+--- a/assets/css/_variables.scss
++++ b/assets/css/_variables.scss
+@@ -1 +1,2 @@
+ $yellow: #ffdf00;
++$blue:    #507bff
+\ No newline at end of file
+diff --git a/assets/css/app.scss b/assets/css/app.scss
+index 04bb677..6934e25 100644
+--- a/assets/css/app.scss
++++ b/assets/css/app.scss
+@@ -1,6 +1,6 @@
+ @import 'variables';
+ @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+-@import '~bootstrap/dist/css/bootstrap.css';
++@import '~bootstrap/scss/bootstrap';
+ @import '~@fortawesome/fontawesome-free/css/all.css';
+ 
+ body {

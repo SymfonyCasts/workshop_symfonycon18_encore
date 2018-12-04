@@ -1,0 +1,12 @@
+diff --git a/play.js b/play.js
+index 6a20b53..dc6964e 100644
+--- a/play.js
++++ b/play.js
+@@ -2,4 +2,6 @@ const Conference = require('./conference');
+ 
+ const sfCon = new Conference('SymfonyCon 2018');
+ 
+-console.log(sfCon.name);
++setTimeout(function() {
++    console.log(sfCon.name);
++}, 500);

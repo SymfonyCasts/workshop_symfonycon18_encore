@@ -1,0 +1,38 @@
+diff --git a/templates/base.html.twig b/templates/base.html.twig
+index 39e8ecb..612a630 100644
+--- a/templates/base.html.twig
++++ b/templates/base.html.twig
+@@ -82,7 +82,7 @@
+     <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+     <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.auto.min.js"></script>
+-    <script src="{{ asset('build/app.js') }}"></script>
++    {{ encore_entry_script_tags('app') }}
+ {% endblock %}
+ 
+ </body>
+diff --git a/templates/lift/index.html.twig b/templates/lift/index.html.twig
+index d2a4c7f..41ec3ff 100644
+--- a/templates/lift/index.html.twig
++++ b/templates/lift/index.html.twig
+@@ -55,5 +55,5 @@
+     {{ parent() }}
+ 
+     <script src="https://cdn.jsdelivr.net/sweetalert2/6.1.0/sweetalert2.min.js"></script>
+-    <script src="{{ asset('build/rep_log.js') }}"></script>
++    {{ encore_entry_script_tags('rep_log') }}
+ {% endblock %}
+diff --git a/templates/security/login.html.twig b/templates/security/login.html.twig
+index 7e00913..9d36182 100644
+--- a/templates/security/login.html.twig
++++ b/templates/security/login.html.twig
+@@ -9,8 +9,7 @@
+ {% block javascripts %}
+     {{ parent() }}
+ 
+-    <script src="{{ asset('build/vendors~app~login~rep_log.js') }}"></script>
+-    <script src="{{ asset('build/login.js') }}"></script>
++    {{ encore_entry_script_tags('login') }}
+ {% endblock %}
+ 
+ {% block title %}Log in!{% endblock %}

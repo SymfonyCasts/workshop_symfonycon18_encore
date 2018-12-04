@@ -1,0 +1,25 @@
+diff --git a/public/assets/js/login.js b/public/assets/js/login.js
+index 9bcf3be..e8c8d35 100644
+--- a/public/assets/js/login.js
++++ b/public/assets/js/login.js
+@@ -1,6 +1,7 @@
+ 'use strict';
+ 
+ const $ = require('jquery');
++require('../css/login.css');
+ 
+     $(document).ready(function() {
+         $('.js-recommended-login').on('click', '.js-show-login', function(e) {
+diff --git a/templates/security/login.html.twig b/templates/security/login.html.twig
+index 9d36182..7678acd 100644
+--- a/templates/security/login.html.twig
++++ b/templates/security/login.html.twig
+@@ -3,7 +3,7 @@
+ {% block stylesheets %}
+     {{ parent() }}
+ 
+-    <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}" />
++    {{ encore_entry_link_tags('login') }}
+ {% endblock %}
+ 
+ {% block javascripts %}

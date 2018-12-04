@@ -1,0 +1,53 @@
+diff --git a/public/assets/css/app.css b/assets/css/app.css
+similarity index 100%
+rename from public/assets/css/app.css
+rename to assets/css/app.css
+diff --git a/public/assets/css/login.css b/assets/css/login.css
+similarity index 100%
+rename from public/assets/css/login.css
+rename to assets/css/login.css
+diff --git a/public/assets/images/dumbbell-mini.png b/assets/images/dumbbell-mini.png
+similarity index 100%
+rename from public/assets/images/dumbbell-mini.png
+rename to assets/images/dumbbell-mini.png
+diff --git a/public/assets/images/dumbbell.png b/assets/images/dumbbell.png
+similarity index 100%
+rename from public/assets/images/dumbbell.png
+rename to assets/images/dumbbell.png
+diff --git a/public/assets/js/Components/RepLogApp.js b/assets/js/Components/RepLogApp.js
+similarity index 100%
+rename from public/assets/js/Components/RepLogApp.js
+rename to assets/js/Components/RepLogApp.js
+diff --git a/public/assets/js/Components/RepLogAppHelper.js b/assets/js/Components/RepLogAppHelper.js
+similarity index 100%
+rename from public/assets/js/Components/RepLogAppHelper.js
+rename to assets/js/Components/RepLogAppHelper.js
+diff --git a/public/assets/js/app.js b/assets/js/app.js
+similarity index 100%
+rename from public/assets/js/app.js
+rename to assets/js/app.js
+diff --git a/public/assets/js/login.js b/assets/js/login.js
+similarity index 100%
+rename from public/assets/js/login.js
+rename to assets/js/login.js
+diff --git a/public/assets/js/rep_log.js b/assets/js/rep_log.js
+similarity index 100%
+rename from public/assets/js/rep_log.js
+rename to assets/js/rep_log.js
+diff --git a/webpack.config.js b/webpack.config.js
+index bd41475..1a03562 100644
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -17,9 +17,9 @@ Encore
+      * Each entry will result in one JavaScript file (e.g. app.js)
+      * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
+      */
+-    .addEntry('rep_log', './public/assets/js/rep_log.js')
+-    .addEntry('login', './public/assets/js/login.js')
+-    .addEntry('app', './public/assets/js/app.js')
++    .addEntry('rep_log', './assets/js/rep_log.js')
++    .addEntry('login', './assets/js/login.js')
++    .addEntry('app', './assets/js/app.js')
+     //.addEntry('page2', './assets/js/page2.js')
+ 
+     // will require an extra script tag for runtime.js

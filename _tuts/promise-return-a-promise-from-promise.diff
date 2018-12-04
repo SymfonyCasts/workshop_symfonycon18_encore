@@ -1,0 +1,17 @@
+diff --git a/play.js b/play.js
+index 5c5ddd9..6e73fb7 100644
+--- a/play.js
++++ b/play.js
+@@ -17,7 +17,11 @@ eventuallyPrint(sfCon.name)
+         console.log('callback!');
+         console.log(data);
+ 
+-        return Math.random();
++        return new Promise((resolve, reject) => {
++            setTimeout(() => {
++                resolve(Math.random());
++            }, 2000)
++        });
+     })
+     .then((data) => {
+         console.log(data);

@@ -1,0 +1,13 @@
+diff --git a/webpack.config.js b/webpack.config.js
+index 2ce4c7d..b0fb8a1 100644
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -46,7 +46,7 @@ Encore
+     //.enableTypeScriptLoader()
+ 
+     // uncomment if you're having problems with a jQuery plugin
+-    //.autoProvidejQuery()
++    .autoProvidejQuery()
+ ;
+ 
+ module.exports = Encore.getWebpackConfig();

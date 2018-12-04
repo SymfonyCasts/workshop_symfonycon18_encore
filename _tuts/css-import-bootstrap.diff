@@ -1,0 +1,22 @@
+diff --git a/assets/css/app.css b/assets/css/app.css
+index b2d1e85..99387bf 100644
+--- a/assets/css/app.css
++++ b/assets/css/app.css
+@@ -1,4 +1,5 @@
+ @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
++@import '~bootstrap/dist/css/bootstrap.css';
+ 
+ body {
+     font-family: 'Press Start 2P', cursive;
+diff --git a/assets/js/app.js b/assets/js/app.js
+index c501b08..b89a57a 100644
+--- a/assets/js/app.js
++++ b/assets/js/app.js
+@@ -4,7 +4,6 @@ const $ = require('jquery');
+ require('bootstrap');
+ global.jQuery = $;
+ require('jquery-tags-input/dist/jquery.tagsinput.min');
+-require('bootstrap/dist/css/bootstrap.css');
+ require('../css/app.css');
+ 
+     $(document).ready(function() {

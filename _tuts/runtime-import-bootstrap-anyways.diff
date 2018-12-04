@@ -1,0 +1,12 @@
+diff --git a/assets/js/login.js b/assets/js/login.js
+index 0d470a8..0bf8431 100644
+--- a/assets/js/login.js
++++ b/assets/js/login.js
+@@ -1,6 +1,7 @@
+ 'use strict';
+ 
+ import $ from 'jquery';
++import 'bootstrap';
+ import '../css/login.css';
+ 
+     $(document).ready(function() {

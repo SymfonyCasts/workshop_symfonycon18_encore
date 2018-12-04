@@ -1,0 +1,25 @@
+diff --git a/assets/js/Components/Routing.js b/assets/js/Components/Routing.js
+index 4f0abbf..dfe4d01 100644
+--- a/assets/js/Components/Routing.js
++++ b/assets/js/Components/Routing.js
+@@ -1 +1,6 @@
+-export default global.Routing;
++const routes = require('../../../var/fos_js_routes.json');
++import Routing from '../../../vendor/friendsofsymfony/jsrouting-bundle/Resources/public/js/router.min.js';
++
++Routing.setRoutingData(routes);
++
++export default Routing;
+diff --git a/templates/base.html.twig b/templates/base.html.twig
+index c4e18fc..45d8c5c 100644
+--- a/templates/base.html.twig
++++ b/templates/base.html.twig
+@@ -78,8 +78,6 @@
+ <!-- /container -->
+ 
+ {% block javascripts %}
+-    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+-    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.auto.min.js"></script>
+     {{ encore_entry_script_tags('app') }}
+ {% endblock %}

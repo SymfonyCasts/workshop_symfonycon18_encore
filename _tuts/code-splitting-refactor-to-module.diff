@@ -1,0 +1,34 @@
+diff --git a/assets/js/Components/show_long_email_error.js b/assets/js/Components/show_long_email_error.js
+new file mode 100644
+index 0000000..afe685c
+--- /dev/null
++++ b/assets/js/Components/show_long_email_error.js
+@@ -0,0 +1,6 @@
++import $ from 'jquery';
++
++export default function($emailInput) {
++    const $warning = $('<div class="login-long-email-warning">This is a really long email - are you sure that is right?</div>');
++    $emailInput.before($warning);
++}
+diff --git a/assets/js/login.js b/assets/js/login.js
+index 0bf8431..c8bf10e 100644
+--- a/assets/js/login.js
++++ b/assets/js/login.js
+@@ -3,6 +3,7 @@
+ import $ from 'jquery';
+ import 'bootstrap';
+ import '../css/login.css';
++import showLoginEmailError from './Components/show_long_email_error';
+ 
+     $(document).ready(function() {
+         $('.js-show-login').tooltip();
+@@ -19,8 +20,7 @@ import '../css/login.css';
+             $('.login-long-email-warning').remove();
+ 
+             if ($emailInput.val().length >= 30) {
+-                const $warning = $('<div class="login-long-email-warning">This is a really long email - are you sure that is right?</div>');
+-                $emailInput.before($warning);
++                showLoginEmailError($emailInput);
+             }
+         });
+     });

@@ -1,0 +1,11 @@
+diff --git a/.gitignore b/.gitignore
+index 22c851e..a896509 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -10,5 +10,3 @@
+ ###> symfony/web-server-bundle ###
+ /.web-server-pid
+ ###< symfony/web-server-bundle ###
+-
+-/node_modules/
+\ No newline at end of file

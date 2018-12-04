@@ -1,0 +1,12 @@
+diff --git a/templates/security/login.html.twig b/templates/security/login.html.twig
+index 4d212b5..7e00913 100644
+--- a/templates/security/login.html.twig
++++ b/templates/security/login.html.twig
+@@ -9,6 +9,7 @@
+ {% block javascripts %}
+     {{ parent() }}
+ 
++    <script src="{{ asset('build/vendors~app~login~rep_log.js') }}"></script>
+     <script src="{{ asset('build/login.js') }}"></script>
+ {% endblock %}
+ 

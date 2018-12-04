@@ -1,0 +1,13 @@
+diff --git a/public/assets/js/app.js b/public/assets/js/app.js
+index 000396f..8ee2c45 100644
+--- a/public/assets/js/app.js
++++ b/public/assets/js/app.js
+@@ -2,7 +2,7 @@
+ 
+ const $ = require('jquery');
+ require('bootstrap');
+-require('jquery-tags-input');
++require('jquery-tags-input/dist/jquery.tagsinput.min');
+ 
+     $(document).ready(function() {
+         $('[data-toggle="tooltip"]').tooltip();

@@ -1,0 +1,41 @@
+diff --git a/assets/js/Components/RepLogApp.js b/assets/js/Components/RepLogApp.js
+index fdc1f3b..cfc44fe 100644
+--- a/assets/js/Components/RepLogApp.js
++++ b/assets/js/Components/RepLogApp.js
+@@ -3,8 +3,9 @@
+ import Helper from './RepLogAppHelper';
+ import $ from 'jquery';
+ import Routing from './Routing';
++import { getRepLogs } from '../api/rep_log';
+ 
+-    let HelperInstances = new WeakMap();
++let HelperInstances = new WeakMap();
+ 
+     class RepLogApp {
+         constructor($wrapper) {
+@@ -42,9 +43,7 @@ import Routing from './Routing';
+         }
+ 
+         loadRepLogs() {
+-            $.ajax({
+-                url: Routing.generate('rep_log_list'),
+-            }).then(data => {
++            getRepLogs().then(data => {
+                 for (let repLog of data.items) {
+                     this._addRow(repLog);
+                 }
+diff --git a/assets/js/api/rep_log.js b/assets/js/api/rep_log.js
+new file mode 100644
+index 0000000..4a8d297
+--- /dev/null
++++ b/assets/js/api/rep_log.js
+@@ -0,0 +1,8 @@
++import Routing from '../Components/Routing';
++
++export function getRepLogs() {
++    return fetch(Routing.generate('rep_log_list'))
++        .then(response => {
++            return response.json();
++        });
++}
+\ No newline at end of file

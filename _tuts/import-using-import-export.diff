@@ -1,0 +1,75 @@
+diff --git a/assets/js/Components/RepLogApp.js b/assets/js/Components/RepLogApp.js
+index 796445a..7378ea2 100644
+--- a/assets/js/Components/RepLogApp.js
++++ b/assets/js/Components/RepLogApp.js
+@@ -1,7 +1,7 @@
+ 'use strict';
+ 
+-const Helper = require('./RepLogAppHelper');
+-const $ = require('jquery');
++import Helper from './RepLogAppHelper';
++import $ from 'jquery';
+ 
+     let HelperInstances = new WeakMap();
+ 
+@@ -211,4 +211,4 @@ const $ = require('jquery');
+ </tr>
+ `;
+ 
+-module.exports = RepLogApp;
++export default RepLogApp;
+diff --git a/assets/js/Components/RepLogAppHelper.js b/assets/js/Components/RepLogAppHelper.js
+index 07be204..892b650 100644
+--- a/assets/js/Components/RepLogAppHelper.js
++++ b/assets/js/Components/RepLogAppHelper.js
+@@ -1,4 +1,4 @@
+-module.exports = class Helper {
++export default class Helper {
+     constructor(repLogs) {
+         this.repLogs = repLogs;
+     }
+diff --git a/assets/js/app.js b/assets/js/app.js
+index 51b9d58..73e4b53 100644
+--- a/assets/js/app.js
++++ b/assets/js/app.js
+@@ -1,10 +1,10 @@
+ 'use strict';
+ 
+-const $ = require('jquery');
+-require('bootstrap');
++import $ from 'jquery';
++import 'bootstrap';
+ global.jQuery = $;
+-require('jquery-tags-input/dist/jquery.tagsinput.min');
+-require('../css/app.scss');
++import 'jquery-tags-input/dist/jquery.tagsinput.min';
++import '../css/app.scss';
+ 
+     $(document).ready(function() {
+         $('[data-toggle="tooltip"]').tooltip();
+diff --git a/assets/js/login.js b/assets/js/login.js
+index e8c8d35..d641370 100644
+--- a/assets/js/login.js
++++ b/assets/js/login.js
+@@ -1,7 +1,7 @@
+ 'use strict';
+ 
+-const $ = require('jquery');
+-require('../css/login.css');
++import $ from 'jquery';
++import '../css/login.css';
+ 
+     $(document).ready(function() {
+         $('.js-recommended-login').on('click', '.js-show-login', function(e) {
+diff --git a/assets/js/rep_log.js b/assets/js/rep_log.js
+index ecd7e49..022fe0e 100644
+--- a/assets/js/rep_log.js
++++ b/assets/js/rep_log.js
+@@ -1,5 +1,5 @@
+-const RepLogApp = require('./Components/RepLogApp');
+-const $ = require('jquery');
++import RepLogApp from './Components/RepLogApp';
++import $ from 'jquery';
+ 
+ $(document).ready(function() {
+     var $wrapper = $('.js-rep-log-table');

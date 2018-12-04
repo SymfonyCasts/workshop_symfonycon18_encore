@@ -1,0 +1,26 @@
+diff --git a/assets/js/Components/RepLogApp.js b/assets/js/Components/RepLogApp.js
+index 7378ea2..a633e5d 100644
+--- a/assets/js/Components/RepLogApp.js
++++ b/assets/js/Components/RepLogApp.js
+@@ -2,6 +2,7 @@
+ 
+ import Helper from './RepLogAppHelper';
+ import $ from 'jquery';
++import Routing from 'routing';
+ 
+     let HelperInstances = new WeakMap();
+ 
+diff --git a/webpack.config.js b/webpack.config.js
+index 05d3496..23e163c 100644
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -54,6 +54,9 @@ Encore
+ 
+     // uncomment if you're having problems with a jQuery plugin
+     .autoProvidejQuery()
++    .addExternals({
++        routing: 'Routing'
++    })
+ ;
+ 
+ module.exports = Encore.getWebpackConfig();

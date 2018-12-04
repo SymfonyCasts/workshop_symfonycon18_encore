@@ -1,0 +1,50 @@
+diff --git a/assets/css/app.css b/assets/css/app.css
+index 99387bf..9afea5b 100644
+--- a/assets/css/app.css
++++ b/assets/css/app.css
+@@ -1,5 +1,6 @@
+ @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+ @import '~bootstrap/dist/css/bootstrap.css';
++@import '~@fortawesome/fontawesome-free/css/all.css';
+ 
+ body {
+     font-family: 'Press Start 2P', cursive;
+diff --git a/package.json b/package.json
+index 83b6e7e..d1cfbdb 100644
+--- a/package.json
++++ b/package.json
+@@ -1,5 +1,6 @@
+ {
+     "devDependencies": {
++        "@fortawesome/fontawesome-free": "^5.5.0",
+         "@symfony/webpack-encore": "^0.22.0",
+         "bootstrap": "^4.1.3",
+         "jquery": "^3.3.1",
+diff --git a/templates/base.html.twig b/templates/base.html.twig
+index fb75906..c4e18fc 100644
+--- a/templates/base.html.twig
++++ b/templates/base.html.twig
+@@ -9,7 +9,6 @@
+     <title>{% block title %}Find Something to Lift!{% endblock %}</title>
+ 
+     {% block stylesheets %}
+-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+         {{ encore_entry_link_tags('app') }}
+ 
+     {% endblock %}
+diff --git a/yarn.lock b/yarn.lock
+index 754c88f..a02f7d2 100644
+--- a/yarn.lock
++++ b/yarn.lock
+@@ -590,6 +590,11 @@
+     lodash "^4.17.10"
+     to-fast-properties "^2.0.0"
+ 
++"@fortawesome/fontawesome-free@^5.5.0":
++  version "5.5.0"
++  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.5.0.tgz#0c6c53823d04457ae669cd19567b8a21dbb4fcfd"
++  integrity sha512-p4lu0jfj5QN013ddArh99r3OXZ/fp9rbovs62LfaO70OMBsAXxtNd0lAq/97fitrscR0fqfd+/a5KNcp6Sh/0A==
++
+ "@symfony/webpack-encore@^0.22.0":
+   version "0.22.2"
+   resolved "https://registry.yarnpkg.com/@symfony/webpack-encore/-/webpack-encore-0.22.2.tgz#036cffc86e2f4da2a194b5eabc2409c4ffe0d31b"

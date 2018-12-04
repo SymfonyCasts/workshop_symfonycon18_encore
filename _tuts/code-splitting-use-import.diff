@@ -1,0 +1,23 @@
+diff --git a/assets/js/login.js b/assets/js/login.js
+index c8bf10e..1cfd3dd 100644
+--- a/assets/js/login.js
++++ b/assets/js/login.js
+@@ -3,7 +3,6 @@
+ import $ from 'jquery';
+ import 'bootstrap';
+ import '../css/login.css';
+-import showLoginEmailError from './Components/show_long_email_error';
+ 
+     $(document).ready(function() {
+         $('.js-show-login').tooltip();
+@@ -20,7 +19,9 @@ import showLoginEmailError from './Components/show_long_email_error';
+             $('.login-long-email-warning').remove();
+ 
+             if ($emailInput.val().length >= 30) {
+-                showLoginEmailError($emailInput);
++                import('./Components/show_long_email_error').then(showLoginEmailError => {
++                    showLoginEmailError($emailInput);
++                });
+             }
+         });
+     });
