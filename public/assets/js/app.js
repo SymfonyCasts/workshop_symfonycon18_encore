@@ -2,7 +2,7 @@
 
 const $ = require('jquery');
 require('bootstrap');
-require('jquery-tags-input');
+require('jquery-tags-input/dist/jquery.tagsinput.min');
 
     $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip();
