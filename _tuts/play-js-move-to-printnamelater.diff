@@ -1,0 +1,30 @@
+diff --git a/conference.js b/conference.js
+index 4ee5028..0fdb3de 100644
+--- a/conference.js
++++ b/conference.js
+@@ -6,4 +6,10 @@ module.exports = class {
+     get name() {
+         return this._name;
+     }
++
++    printNameLater() {
++        setTimeout(function() {
++            console.log(this.name);
++        }, 500);
++    }
+ };
+diff --git a/play.js b/play.js
+index e8413af..ddf49e4 100644
+--- a/play.js
++++ b/play.js
+@@ -2,7 +2,5 @@ const Conference = require('./conference');
+ 
+ const sfCon = new Conference('SymfonyCon 2018');
+ 
+-setTimeout(function() {
+-    console.log(sfCon.name);
+-}, 500);
+-console.log('Done!');
+\ No newline at end of file
++sfCon.printNameLater();
++console.log('Done!');

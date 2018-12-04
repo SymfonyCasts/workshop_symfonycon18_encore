@@ -1,8 +1,8 @@
 diff --git a/play.js b/play.js
-index 6a20b53..dc6964e 100644
+index 6a20b53..e8413af 100644
 --- a/play.js
 +++ b/play.js
-@@ -2,4 +2,6 @@ const Conference = require('./conference');
+@@ -2,4 +2,7 @@ const Conference = require('./conference');
  
  const sfCon = new Conference('SymfonyCon 2018');
  
@@ -10,3 +10,5 @@ index 6a20b53..dc6964e 100644
 +setTimeout(function() {
 +    console.log(sfCon.name);
 +}, 500);
++console.log('Done!');
+\ No newline at end of file

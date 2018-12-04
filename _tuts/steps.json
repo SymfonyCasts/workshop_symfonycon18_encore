@@ -36,13 +36,18 @@
             "description": null
         },
         {
+            "id": "play-js-move-to-printnamelater",
+            "name": "play.js: move to printNameLater()",
+            "description": null
+        },
+        {
             "id": "play-js-arrow-function",
             "name": "play.js: arrow function",
             "description": null
         },
         {
-            "id": "promise-eventuallyprint",
-            "name": "Promise: eventuallyPrint()",
+            "id": "promise-empty",
+            "name": "Promise: Empty",
             "description": null
         },
         {
@@ -391,5 +396,5 @@
             "description": null
         }
     ],
-    "sha": "8ee9c6fcde50ea6dde41e28d907901de058378e9"
+    "sha": "70e3b80857c4da650582579e45e923db7366e676"
 }

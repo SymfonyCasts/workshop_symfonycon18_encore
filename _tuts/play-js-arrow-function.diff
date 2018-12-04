@@ -1,12 +1,13 @@
-diff --git a/play.js b/play.js
-index dc6964e..acae14d 100644
---- a/play.js
-+++ b/play.js
-@@ -2,6 +2,6 @@ const Conference = require('./conference');
+diff --git a/conference.js b/conference.js
+index 0fdb3de..6e7e5b0 100644
+--- a/conference.js
++++ b/conference.js
+@@ -8,7 +8,7 @@ module.exports = class {
+     }
  
- const sfCon = new Conference('SymfonyCon 2018');
- 
--setTimeout(function() {
-+setTimeout(() => {
-     console.log(sfCon.name);
- }, 500);
+     printNameLater() {
+-        setTimeout(function() {
++        setTimeout(() => {
+             console.log(this.name);
+         }, 500);
+     }
