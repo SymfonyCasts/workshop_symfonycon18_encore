@@ -1,7 +1,7 @@
 'use strict';
 
-const Helper = require('./RepLogAppHelper');
-const $ = require('jquery');
+import Helper from './RepLogAppHelper';
+import $ from 'jquery';
 
     let HelperInstances = new WeakMap();
 
@@ -211,4 +211,4 @@ const $ = require('jquery');
 </tr>
 `;
 
-module.exports = RepLogApp;
+export default RepLogApp;

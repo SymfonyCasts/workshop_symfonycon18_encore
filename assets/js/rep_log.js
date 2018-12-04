@@ -1,5 +1,5 @@
-const RepLogApp = require('./Components/RepLogApp');
-const $ = require('jquery');
+import RepLogApp from './Components/RepLogApp';
+import $ from 'jquery';
 
 $(document).ready(function() {
     var $wrapper = $('.js-rep-log-table');

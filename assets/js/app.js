@@ -1,9 +1,9 @@
 'use strict';
 
-const $ = require('jquery');
-require('bootstrap');
-require('jquery-tags-input/dist/jquery.tagsinput.min');
-require('../css/app.scss');
+import $ from 'jquery';
+import 'bootstrap';
+import 'jquery-tags-input/dist/jquery.tagsinput.min';
+import '../css/app.scss';
 
     $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip();

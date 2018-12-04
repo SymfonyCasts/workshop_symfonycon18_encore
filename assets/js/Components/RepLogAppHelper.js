@@ -1,4 +1,4 @@
-module.exports = class Helper {
+export default class Helper {
     constructor(repLogs) {
         this.repLogs = repLogs;
     }
