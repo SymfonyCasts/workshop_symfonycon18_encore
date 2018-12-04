@@ -3,11 +3,12 @@ import Routing from '../../../vendor/friendsofsymfony/jsrouting-bundle/Resources
 
 Routing.setRoutingData(routes);
 
-console.log(IS_PRODUCTION);
-fetch('/js/routing.json').then(Response => {
-    Response.json().then(data => {
-        Routing.setRoutingData(routes);
+if (!IS_PRODUCTION) {
+    fetch('/js/routing.json').then(Response => {
+        Response.json().then(data => {
+            Routing.setRoutingData(routes);
+        });
     });
-});
+}
 
 export default Routing;
