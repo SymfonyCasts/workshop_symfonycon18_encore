@@ -9,8 +9,7 @@
 {% block javascripts %}
     {{ parent() }}
 
-    <script src="{{ asset('build/vendors~app~login~rep_log.js') }}"></script>
-    <script src="{{ asset('build/login.js') }}"></script>
+    {{ encore_entry_script_tags('login') }}
 {% endblock %}
 
 {% block title %}Log in!{% endblock %}
