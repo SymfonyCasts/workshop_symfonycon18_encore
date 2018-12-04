@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+}
+
 .main-content {
     margin-top: 80px;
 }
@@ -48,7 +54,7 @@ footer.footer {
 
 .leaderboard-table {
     border: 2px solid #000;
-    font-size: 12px;
+    font-size: 7px;
 }
 
 .leaderboard-table-striped>tbody>tr:nth-of-type(odd) {
