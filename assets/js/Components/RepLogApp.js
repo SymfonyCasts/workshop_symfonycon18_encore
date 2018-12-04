@@ -2,6 +2,7 @@
 
 import Helper from './RepLogAppHelper';
 import $ from 'jquery';
+import Routing from 'routing';
 
     let HelperInstances = new WeakMap();
 
