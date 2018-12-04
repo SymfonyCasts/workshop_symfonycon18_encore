@@ -4,6 +4,8 @@ import $ from 'jquery';
 import '../css/login.css';
 
     $(document).ready(function() {
+        $('.js-show-login').tooltip();
+
         $('.js-recommended-login').on('click', '.js-show-login', function(e) {
             e.preventDefault();
 
