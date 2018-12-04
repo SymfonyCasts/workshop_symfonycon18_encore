@@ -6,4 +6,10 @@ module.exports = class {
     get name() {
         return this._name;
     }
+
+    printNameLater() {
+        setTimeout(function() {
+            console.log(this.name);
+        }, 500);
+    }
 };
