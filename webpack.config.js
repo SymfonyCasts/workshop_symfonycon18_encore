@@ -19,7 +19,7 @@ Encore
      */
     .addEntry('rep_log', './public/assets/js/rep_log.js')
     .addEntry('login', './public/assets/js/login.js')
-    //.addEntry('page1', './assets/js/page1.js')
+    .addEntry('app', './public/assets/js/app.js')
     //.addEntry('page2', './assets/js/page2.js')
 
     // will require an extra script tag for runtime.js
