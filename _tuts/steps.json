@@ -181,8 +181,8 @@
             "description": null
         },
         {
-            "id": "bootstrap-make-jquery-global",
-            "name": "Bootstrap: Make jQuery global",
+            "id": "bootstrap-empty",
+            "name": "Bootstrap: Empty",
             "description": null
         },
         {
@@ -396,5 +396,5 @@
             "description": null
         }
     ],
-    "sha": "70e3b80857c4da650582579e45e923db7366e676"
+    "sha": "143a2fdbb77318c4a52bfa0dda8f62741e41fe9b"
 }

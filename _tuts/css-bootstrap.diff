@@ -1,10 +1,10 @@
 diff --git a/assets/js/app.js b/assets/js/app.js
-index b89a57a..c501b08 100644
+index d2c0d28..fa55a5e 100644
 --- a/assets/js/app.js
 +++ b/assets/js/app.js
-@@ -4,6 +4,7 @@ const $ = require('jquery');
+@@ -3,6 +3,7 @@
+ const $ = require('jquery');
  require('bootstrap');
- global.jQuery = $;
  require('jquery-tags-input/dist/jquery.tagsinput.min');
 +require('bootstrap/dist/css/bootstrap.css');
  require('../css/app.css');

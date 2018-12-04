@@ -29,19 +29,18 @@ index 07be204..892b650 100644
          this.repLogs = repLogs;
      }
 diff --git a/assets/js/app.js b/assets/js/app.js
-index 51b9d58..73e4b53 100644
+index 65df1d1..54cd09a 100644
 --- a/assets/js/app.js
 +++ b/assets/js/app.js
-@@ -1,10 +1,10 @@
+@@ -1,9 +1,9 @@
  'use strict';
  
 -const $ = require('jquery');
 -require('bootstrap');
-+import $ from 'jquery';
-+import 'bootstrap';
- global.jQuery = $;
 -require('jquery-tags-input/dist/jquery.tagsinput.min');
 -require('../css/app.scss');
++import $ from 'jquery';
++import 'bootstrap';
 +import 'jquery-tags-input/dist/jquery.tagsinput.min';
 +import '../css/app.scss';
  

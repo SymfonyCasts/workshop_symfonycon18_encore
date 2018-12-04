@@ -11,16 +11,3 @@ index d641370..0d470a8 100644
          $('.js-recommended-login').on('click', '.js-show-login', function(e) {
              e.preventDefault();
  
-diff --git a/templates/security/login.html.twig b/templates/security/login.html.twig
-index dd5de70..474c63c 100644
---- a/templates/security/login.html.twig
-+++ b/templates/security/login.html.twig
-@@ -20,7 +20,7 @@
-             <form method="post" class="form-signin">
-                 <h3><img class="dumbbell" src="{{ asset('build/dumbbell.png') }}" />Login! Start Lifting!</h3>
-                 <div class="js-recommended-login">
--                    <a href="#" class="js-show-login">Don't know the login?</a>
-+                    <a href="#" class="js-show-login" title="Click for login details">Don't know the login?</a>
-                     <div class="js-recommended-login-details" style="display: none;">
-                         Sir or madam, might I recommend that you try the following login details:
-                         <table class="table">

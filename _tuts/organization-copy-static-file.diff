@@ -16,7 +16,7 @@ index 41ec3ff..473d6bf 100644
                  </h2>
  
 diff --git a/templates/security/login.html.twig b/templates/security/login.html.twig
-index 7678acd..dd5de70 100644
+index ebbebcc..474c63c 100644
 --- a/templates/security/login.html.twig
 +++ b/templates/security/login.html.twig
 @@ -18,7 +18,7 @@
@@ -26,7 +26,7 @@ index 7678acd..dd5de70 100644
 -                <h3><img class="dumbbell" src="{{ asset('assets/images/dumbbell.png') }}">Login! Start Lifting!</h3>
 +                <h3><img class="dumbbell" src="{{ asset('build/dumbbell.png') }}" />Login! Start Lifting!</h3>
                  <div class="js-recommended-login">
-                     <a href="#" class="js-show-login">Don't know the login?</a>
+                     <a href="#" class="js-show-login" title="Click for login details">Don't know the login?</a>
                      <div class="js-recommended-login-details" style="display: none;">
 diff --git a/webpack.config.js b/webpack.config.js
 index 1a03562..b40f630 100644

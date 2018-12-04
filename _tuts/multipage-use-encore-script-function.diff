@@ -23,7 +23,7 @@ index d2a4c7f..41ec3ff 100644
 +    {{ encore_entry_script_tags('rep_log') }}
  {% endblock %}
 diff --git a/templates/security/login.html.twig b/templates/security/login.html.twig
-index 7e00913..9d36182 100644
+index 44ab4c3..d7822bb 100644
 --- a/templates/security/login.html.twig
 +++ b/templates/security/login.html.twig
 @@ -9,8 +9,7 @@

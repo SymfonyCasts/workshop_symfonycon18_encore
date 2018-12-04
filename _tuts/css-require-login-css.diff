@@ -11,7 +11,7 @@ index 9bcf3be..e8c8d35 100644
      $(document).ready(function() {
          $('.js-recommended-login').on('click', '.js-show-login', function(e) {
 diff --git a/templates/security/login.html.twig b/templates/security/login.html.twig
-index 9d36182..7678acd 100644
+index d7822bb..ebbebcc 100644
 --- a/templates/security/login.html.twig
 +++ b/templates/security/login.html.twig
 @@ -3,7 +3,7 @@

@@ -27,12 +27,12 @@ index 9afea5b..04bb677 100644
      border-radius: 5px;
  }
 diff --git a/assets/js/app.js b/assets/js/app.js
-index b89a57a..51b9d58 100644
+index d2c0d28..65df1d1 100644
 --- a/assets/js/app.js
 +++ b/assets/js/app.js
-@@ -4,7 +4,7 @@ const $ = require('jquery');
+@@ -3,7 +3,7 @@
+ const $ = require('jquery');
  require('bootstrap');
- global.jQuery = $;
  require('jquery-tags-input/dist/jquery.tagsinput.min');
 -require('../css/app.css');
 +require('../css/app.scss');

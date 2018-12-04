@@ -1,9 +1,9 @@
 diff --git a/assets/js/app.js b/assets/js/app.js
-index 73e4b53..34b59e5 100644
+index 54cd09a..ff194f7 100644
 --- a/assets/js/app.js
 +++ b/assets/js/app.js
-@@ -5,6 +5,7 @@ import 'bootstrap';
- global.jQuery = $;
+@@ -4,6 +4,7 @@ import $ from 'jquery';
+ import 'bootstrap';
  import 'jquery-tags-input/dist/jquery.tagsinput.min';
  import '../css/app.scss';
 +import '@babel/polyfill';
