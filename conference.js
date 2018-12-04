@@ -1,1 +1,9 @@
-module.exports = 'SymfonyCon 2018';
+module.exports = class {
+    constructor(name) {
+        this.name = name;
+    }
+
+    getName() {
+        return this.name;
+    }
+};

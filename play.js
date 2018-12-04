@@ -1,3 +1,5 @@
-const conference = require('./conference');
+const Conference = require('./conference');
 
-console.log(conference);
+const sfCon = new Conference('SymfonyCon 2018');
+
+console.log(sfCon.getName());
