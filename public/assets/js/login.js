@@ -8,14 +8,14 @@
             $('.js-recommended-login-details').toggle();
         });
 
-        $('.js-login-field-username').on('keydown', function(e) {
-            const $usernameInput = $(e.currentTarget);
+        $('.js-login-field-email').on('keydown', function(e) {
+            const $emailInput = $(e.currentTarget);
             // remove any existing warnings
-            $('.login-long-username-warning').remove();
+            $('.login-long-email-warning').remove();
 
-            if ($usernameInput.val().length >= 20) {
-                const $warning = $('<div class="login-long-username-warning">This is a really long username - are you sure that is right?</div>');
-                $usernameInput.before($warning);
+            if ($emailInput.val().length >= 20) {
+                const $warning = $('<div class="login-long-email-warning">This is a really long email - are you sure that is right?</div>');
+                $emailInput.before($warning);
             }
         });
     });
