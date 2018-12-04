@@ -1,6 +1,7 @@
 'use strict';
 
 const Helper = require('./RepLogAppHelper');
+const $ = require('jquery');
 
     let HelperInstances = new WeakMap();
 
