@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import 'bootstrap';
 import '../css/login.css';
-import showLoginEmailError from './Components/show_long_email_error';
 
     $(document).ready(function() {
         $('.js-show-login').tooltip();
@@ -20,7 +19,9 @@ import showLoginEmailError from './Components/show_long_email_error';
             $('.login-long-email-warning').remove();
 
             if ($emailInput.val().length >= 30) {
-                showLoginEmailError($emailInput);
+                import('./Components/show_long_email_error').then(showLoginEmailError => {
+                    showLoginEmailError($emailInput);
+                });
             }
         });
     });
