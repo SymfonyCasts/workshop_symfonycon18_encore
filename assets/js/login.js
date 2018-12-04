@@ -1,6 +1,7 @@
 'use strict';
 
 import $ from 'jquery';
+import 'bootstrap';
 import '../css/login.css';
 
     $(document).ready(function() {
