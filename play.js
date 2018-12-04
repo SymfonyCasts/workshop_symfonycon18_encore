@@ -6,6 +6,8 @@ sfCon.printNameLater()
     .then((data) => {
         console.log('callback!');
         console.log(data);
+
+        return data * 100;
     })
     .then((data) => {
         console.log(data);
