@@ -11,7 +11,7 @@ module.exports = class {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 console.log(this.name);
-                resolve();
+                resolve(Math.random());
             }, 500);
         });
     }
