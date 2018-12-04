@@ -2,6 +2,7 @@
 
 const $ = require('jquery');
 require('bootstrap');
+global.jQuery = $;
 require('jquery-tags-input/dist/jquery.tagsinput.min');
 
     $(document).ready(function() {
