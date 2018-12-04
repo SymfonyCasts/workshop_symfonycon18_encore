@@ -1,5 +1,6 @@
 {
     "devDependencies": {
+        "@babel/polyfill": "^7.0.0",
         "@fortawesome/fontawesome-free": "^5.5.0",
         "@symfony/webpack-encore": "^0.22.0",
         "autoprefixer": "^9.4.0",
