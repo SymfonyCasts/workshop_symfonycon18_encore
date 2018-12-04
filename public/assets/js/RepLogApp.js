@@ -2,8 +2,6 @@
 
 const Helper = require('./RepLogAppHelper');
 
-(function(window, $, Routing, swal) {
-
     let HelperInstances = new WeakMap();
 
     class RepLogApp {
@@ -212,5 +210,4 @@ const Helper = require('./RepLogAppHelper');
 </tr>
 `;
 
-    window.RepLogApp = RepLogApp;
-})(window, jQuery, Routing, swal);
+module.exports = RepLogApp;
